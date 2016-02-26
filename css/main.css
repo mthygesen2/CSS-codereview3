@@ -12,6 +12,11 @@ header ul {
   padding: 0;
   margin: 0; }
 
+header, main .post:nth-child(1), main .post:nth-child(2), main .post:nth-child(3), main .post:nth-child(4) {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -390,16 +395,13 @@ ul {
 header {
   height: 500px;
   width: 100%;
-  background-image: url(../img/iceland.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
+  background-image: url(../img/iceland.jpg); }
   header h2 {
     font-family: "Playfair Display", serif;
     font-size: 2em;
     color: white;
     padding: 10px;
-    margin: 20px 0 0 0; }
+    margin: 0; }
   header li {
     display: inline-block; }
   header li a {
@@ -408,15 +410,124 @@ header {
     color: #ffc3bc; }
 
 main .recentPosts {
-  padding: 50px 0 0 10px; }
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+  padding-bottom: 10px; }
+  main .recentPosts::after {
+    clear: both;
+    content: "";
+    display: table; }
   main .recentPosts h1 {
     text-align: center; }
 main .post {
-  text-align: center;
-  margin: 25px 0 0 0; }
-  main .post img {
-    height: 50%;
-    width: 90%; }
+  height: 450px;
+  width: 100%;
+  position: relative;
+  height: 450px;
+  width: 100%;
+  position: relative;
+  height: 450px;
+  width: 100%;
+  position: relative;
+  height: 450px;
+  width: 100%;
+  position: relative; }
+  main .post:nth-child(1) {
+    background-image: url(../img/1.jpg); }
+  @media (min-width: 600px) {
+    main .post {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      margin-right: 0; }
+      main .post:last-child {
+        margin-right: 0; } }
+  @media (min-width: 1000px) {
+    main .post {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      margin-right: 0; }
+      main .post:last-child {
+        margin-right: 0; } }
+  main .post:nth-child(2) {
+    background-image: url(../img/2.jpg); }
+  @media (min-width: 600px) {
+    main .post {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      margin-right: 0; }
+      main .post:last-child {
+        margin-right: 0; } }
+  @media (min-width: 1000px) {
+    main .post {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      margin-right: 0; }
+      main .post:last-child {
+        margin-right: 0; } }
+  main .post:nth-child(3) {
+    background-image: url(../img/3.jpg); }
+  @media (min-width: 600px) {
+    main .post {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      margin-right: 0; }
+      main .post:last-child {
+        margin-right: 0; } }
+  @media (min-width: 1000px) {
+    main .post {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      margin-right: 0; }
+      main .post:last-child {
+        margin-right: 0; } }
+  main .post:nth-child(4) {
+    background-image: url(../img/4.jpg); }
+  @media (min-width: 600px) {
+    main .post {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      margin-right: 0; }
+      main .post:last-child {
+        margin-right: 0; } }
+  @media (min-width: 1000px) {
+    main .post {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      margin-right: 0; }
+      main .post:last-child {
+        margin-right: 0; } }
+  main .post .post-content {
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin: 25px 0 0; }
+
+.allPosts {
+  padding: 0 auto; }
+  .allPosts::after {
+    clear: both;
+    content: "";
+    display: table; }
 
 footer {
   background-color: #6b6485;
@@ -424,10 +535,17 @@ footer {
   width: 100%;
   text-align: center;
   margin-top: 50px; }
-  footer a {
+  footer .footer-icons {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
     color: #ffc3bc; }
+    footer .footer-icons a {
+      padding-right: 20px;
+      padding-left: 20px;
+      color: #ffc3bc; }
+    footer .footer-icons i {
+      padding-right: 5px;
+      padding-left: 5px; }
 
 /*# sourceMappingURL=main.css.map */

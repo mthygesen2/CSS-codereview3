@@ -3,10 +3,16 @@ footer {
   @include size(100% 100px);
   text-align: center;
   margin-top: 50px;
-  a {
-    position: relative;
-    top: 50%;
+  .footer-icons {
+    @include position(relative, 50% null null null);
     transform: translateY(-50%);
     color: $font-color-pink;
+    a {
+      @include padding(null 20px null 20px);
+      color: $font-color-pink;
+    }
+    i{
+      @include padding(null 5px null 5px);
+    }
   }
 }

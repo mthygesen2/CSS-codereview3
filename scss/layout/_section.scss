@@ -1,15 +1,39 @@
 main {
   .recentPosts {
-    padding: 50px 0 0 10px;
+    @include outer-container;
+    @include padding(50px null 10px null);
     h1{
-      text-align: center;
+      text-align: $post-text;
     }
   }
-  .post {
-  text-align: center;
-  margin: 25px 0 0 0;
-  img {
-    @include size(90% 50%);
+  .post{
+    @for $i from 1 through $post-number {
+      &:nth-child(#{$i}) {
+    background-image:url(../img/#{$i}.jpg);
+    @extend %background;
+    }
+    @include size(100% 450px);
+    @include position(relative, null null null null);
+    @media(min-width: 600px) {
+      @include span-columns(6);
+      @include omega();
+  
+    }
+    @media(min-width: 1000px) {
+      @include span-columns(4);
+      @include omega();
     }
   }
+  .post-content{
+    @include position(absolute, null null 10px null);
+    color: $font-color-white;
+    text-align: $post-text;
+    background-color: $post-black-opacity;
+    @include margin(25px 0 0 0);
+  }
+}
+}
+.allPosts {
+  @include clearfix();
+  padding: 0 auto;
 }

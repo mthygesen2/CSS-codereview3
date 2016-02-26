@@ -2,14 +2,12 @@
 header {
   @include size(100% 500px);
   background-image: url(../img/iceland.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  @extend %background;
   h2 {
     @include font($font:$font-head, $size:2em,
     $color:$font-color-logo);
     padding: 10px;
-    margin: 20px 0 0 0;
+    margin: 0;
   }
   ul {
     @extend %zero;
