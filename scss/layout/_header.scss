@@ -1,0 +1,24 @@
+
+header {
+  @include size(100% 500px);
+  background-image: url(../img/iceland.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  h2 {
+    @include font($font:$font-head, $size:2em,
+    $color:$font-color-logo);
+    padding: 10px;
+    margin: 20px 0 0 0;
+  }
+  ul {
+    @extend %zero;
+  }
+  li{
+    display: inline-block;
+    @extend %list-items;
+  }
+  li a{
+    @include font($font:$font-main, $color:$font-color-pink)
+  }
+}

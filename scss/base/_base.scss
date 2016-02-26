@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: $font-main;
+  margin: 0;
+  color: $font-color-main;
+}
+
+
+//Basic styles for links
+
+a, li a{
+  // color: $brand-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    // color: ;
+  }
+}
+
+ul {
+  list-style: none;
+}

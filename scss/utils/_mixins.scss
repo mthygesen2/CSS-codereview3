@@ -1,0 +1,17 @@
+@mixin font($font: $font-main, $size: 1em, $weight:null, $color: $font-main-color) {
+  font-family: $font;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+//calculates Font SIZE from PX to REM 
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
