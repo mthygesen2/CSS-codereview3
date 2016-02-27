@@ -9,7 +9,7 @@
 }
 .allPosts{
   @include clearfix();
-    @include span-columns(12);
+  @include span-columns(12);
   width: 100%;
 }
 .post{
@@ -33,8 +33,8 @@
     }
   }
 @media(min-width: 600px){
-  @include span-columns(6 of 12);
-  @include omega(n);
+  @include span-columns(6);
+  @include omega();
   }
 @media(min-width: 1000px){
   @include span-columns(3);
