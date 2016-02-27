@@ -1,0 +1,10 @@
+.instagram {
+  @include outer-container;
+  h1 {
+    text-align: $post-text;
+  }
+  img {
+    @include span-columns(3);
+
+  }
+}

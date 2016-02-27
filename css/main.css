@@ -6,13 +6,13 @@ html {
 
 header li {
   padding: 2px 0 5px 10px;
-  font-size: 1.25em; }
+  font-size: 1.5625em; }
 
 header ul {
   padding: 0;
   margin: 0; }
 
-header, main .post:nth-child(1), main .post:nth-child(2), main .post:nth-child(3), main .post:nth-child(4) {
+header, .post:nth-child(1), .post:nth-child(2), .post:nth-child(3), .post:nth-child(4) {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
@@ -380,7 +380,7 @@ body {
   height: 100%; }
 
 body {
-  font-family: "Karla", sans-serif;
+  font-family: "Catamaran", sans-serif;
   margin: 0;
   color: #190842; }
 
@@ -395,33 +395,65 @@ ul {
 header {
   height: 500px;
   width: 100%;
-  background-image: url(../img/iceland.jpg); }
+  background-image: url(../img/iceland.jpg);
+  position: relative; }
   header h2 {
-    font-family: "Playfair Display", serif;
-    font-size: 2em;
+    font-family: "Bad Script", cursive;
+    font-size: 2.5em;
     color: white;
     padding: 10px;
     margin: 0; }
+  header ul {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 150px; }
+    @media (min-width: 725px) {
+      header ul {
+        padding: 0 10px 0 0;
+        position: absolute;
+        top: 25px;
+        right: 0;
+        width: auto;
+        background-color: transparent; } }
   header li {
-    display: inline-block; }
+    display: block; }
+    @media (min-width: 725px) {
+      header li {
+        display: inline-block;
+        font-size: 1.25em; } }
   header li a {
-    font-family: "Karla", sans-serif;
+    font-family: "Catamaran", sans-serif;
     font-size: 1em;
-    color: #ffc3bc; }
+    color: white; }
 
-main .recentPosts {
+.recentPosts {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
   padding-top: 50px;
-  padding-bottom: 10px; }
-  main .recentPosts::after {
+  padding-bottom: 10px;
+  margin: 0;
+  max-width: 100%; }
+  .recentPosts::after {
     clear: both;
     content: "";
     display: table; }
-  main .recentPosts h1 {
+  .recentPosts h1 {
     text-align: center; }
-main .post {
+
+.allPosts {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  width: 100%; }
+  .allPosts::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .allPosts:last-child {
+    margin-right: 0; }
+
+.post {
   height: 450px;
   width: 100%;
   position: relative;
@@ -434,103 +466,64 @@ main .post {
   height: 450px;
   width: 100%;
   position: relative; }
-  main .post:nth-child(1) {
+  .post:nth-child(1) {
     background-image: url(../img/1.jpg); }
-  @media (min-width: 600px) {
-    main .post {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 48.82117%;
-      margin-right: 0; }
-      main .post:last-child {
-        margin-right: 0; } }
-  @media (min-width: 1000px) {
-    main .post {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 31.76157%;
-      margin-right: 0; }
-      main .post:last-child {
-        margin-right: 0; } }
-  main .post:nth-child(2) {
+  .post:nth-child(2) {
     background-image: url(../img/2.jpg); }
-  @media (min-width: 600px) {
-    main .post {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 48.82117%;
-      margin-right: 0; }
-      main .post:last-child {
-        margin-right: 0; } }
-  @media (min-width: 1000px) {
-    main .post {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 31.76157%;
-      margin-right: 0; }
-      main .post:last-child {
-        margin-right: 0; } }
-  main .post:nth-child(3) {
+  .post:nth-child(3) {
     background-image: url(../img/3.jpg); }
-  @media (min-width: 600px) {
-    main .post {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 48.82117%;
-      margin-right: 0; }
-      main .post:last-child {
-        margin-right: 0; } }
-  @media (min-width: 1000px) {
-    main .post {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 31.76157%;
-      margin-right: 0; }
-      main .post:last-child {
-        margin-right: 0; } }
-  main .post:nth-child(4) {
+  .post:nth-child(4) {
     background-image: url(../img/4.jpg); }
-  @media (min-width: 600px) {
-    main .post {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 48.82117%;
-      margin-right: 0; }
-      main .post:last-child {
-        margin-right: 0; } }
-  @media (min-width: 1000px) {
-    main .post {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 31.76157%;
-      margin-right: 0; }
-      main .post:last-child {
-        margin-right: 0; } }
-  main .post .post-content {
+  .post .post-content {
     position: absolute;
     bottom: 10px;
     color: white;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.4);
     margin: 25px 0 0; }
+    .post .post-content a {
+      text-decoration: none;
+      color: white; }
+  @media (min-width: 600px) {
+    .post {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      .post:last-child {
+        margin-right: 0; }
+      .post:nth-child(n) {
+        margin-right: 0; } }
+  @media (min-width: 1000px) {
+    .post {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%;
+      margin-right: 0; }
+      .post:last-child {
+        margin-right: 0; } }
 
-.allPosts {
-  padding: 0 auto; }
-  .allPosts::after {
+.instagram {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .instagram::after {
     clear: both;
     content: "";
     display: table; }
+  .instagram h1 {
+    text-align: center; }
+  .instagram img {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%; }
+    .instagram img:last-child {
+      margin-right: 0; }
 
 footer {
-  background-color: #6b6485;
+  background-color: black;
   height: 100px;
   width: 100%;
   text-align: center;
@@ -539,11 +532,11 @@ footer {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    color: #ffc3bc; }
+    color: #ededf0; }
     footer .footer-icons a {
       padding-right: 20px;
       padding-left: 20px;
-      color: #ffc3bc; }
+      color: #ededf0; }
     footer .footer-icons i {
       padding-right: 5px;
       padding-left: 5px; }

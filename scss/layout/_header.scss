@@ -4,19 +4,32 @@ header {
   background-image: url(../img/iceland.jpg);
   @extend %background;
   h2 {
-    @include font($font:$font-head, $size:2em,
+    @include font($font:$font-head, $size:2.5em,
     $color:$font-color-logo);
     padding: 10px;
     margin: 0;
   }
+  position: relative;
   ul {
     @extend %zero;
+    background-color:$post-black-opacity;
+    width: 150px;
+    @media(min-width: 725px){
+      @include padding(0 10px 0 0);
+      @include position(absolute, 25px 0 null null);
+      width: auto;
+      background-color: transparent;
+    }
   }
-  li{
-    display: inline-block;
+  li {
+    display: block;
     @extend %list-items;
+    @media(min-width: 725px){
+      display: inline-block;
+      font-size: em(20px);
+    }
   }
   li a{
-    @include font($font:$font-main, $color:$font-color-pink)
+    @include font($font:$font-main, $color:$font-color-white);
   }
 }

@@ -1,28 +1,25 @@
-main {
-  .recentPosts {
-    @include outer-container;
-    @include padding(50px null 10px null);
-    h1{
-      text-align: $post-text;
-    }
+.recentPosts {
+  @include outer-container;
+  @include padding(50px null 10px null);
+  margin:0;
+  max-width: 100%;
+  h1{
+    text-align: $post-text;
   }
-  .post{
-    @for $i from 1 through $post-number {
-      &:nth-child(#{$i}) {
-    background-image:url(../img/#{$i}.jpg);
-    @extend %background;
-    }
-    @include size(100% 450px);
-    @include position(relative, null null null null);
-    @media(min-width: 600px) {
-      @include span-columns(6);
-      @include omega();
-  
-    }
-    @media(min-width: 1000px) {
-      @include span-columns(4);
-      @include omega();
-    }
+}
+.allPosts{
+  @include clearfix();
+    @include span-columns(12);
+  width: 100%;
+}
+.post{
+  @for $i from 1 through $post-number {
+    &:nth-child(#{$i}) {
+  background-image:url(../img/#{$i}.jpg);
+  @extend %background;
+  }
+  @include size(100% 450px);
+  @include position(relative, null null null null);
   }
   .post-content{
     @include position(absolute, null null 10px null);
@@ -30,10 +27,17 @@ main {
     text-align: $post-text;
     background-color: $post-black-opacity;
     @include margin(25px 0 0 0);
+    a{
+      text-decoration: none;
+      color: $font-color-white;
+    }
   }
-}
-}
-.allPosts {
-  @include clearfix();
-  padding: 0 auto;
+@media(min-width: 600px){
+  @include span-columns(6 of 12);
+  @include omega(n);
+  }
+@media(min-width: 1000px){
+  @include span-columns(3);
+  @include omega();
+  }
 }
